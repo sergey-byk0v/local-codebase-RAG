@@ -1,4 +1,4 @@
-# RAG Chat Application 🤖
+# RAG Chat Application
 
 A local Retrieval-Augmented Generation (RAG) chatbot with PyTorch documentation search, powered by Qwen2.5-Coder LLM.  
 This setup is designed for searching through local codebases. The example on GitHub uses parsed PyTorch docstrings for demonstration, but you can adapt it to index and search your own project documentation or codebase.  
