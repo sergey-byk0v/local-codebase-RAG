@@ -20,7 +20,7 @@ st.set_page_config(
 
 def find_closest_embeddings(embeds_df, target_emded, top_n=5):
     embeddings = embeds_df[:, 3:]
-    distances = np.mean((embeddings - target_emded)**2, axis=1)
+    distances = np.dot(embeddings, target_emded) / (np.linalg.norm(embeddings) * np.linalg.norm(target_emded))
     top_indices = np.argsort(distances)[:top_n]
 
     return embeds_df[top_indices, 0], embeds_df[top_indices, 2], top_indices
